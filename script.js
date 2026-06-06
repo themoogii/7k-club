@@ -2128,6 +2128,58 @@ function labCoachReply(prompt) {
   return `For ${event.title}: keep the plan simple. Warm up 8 minutes, run the first 2K controlled, check breathing before changing pace, and write one note after the run so your Lab memory gets smarter.`;
 }
 
+function labCoachEventContext(event) {
+  return {
+    id: event.id,
+    title: event.title,
+    day: event.day,
+    date: event.date,
+    time: event.time,
+    distance: event.distance,
+    pace: event.pace,
+    vibe: event.vibe,
+    description: event.description,
+    meetup: event.meetup,
+    itinerary: event.itinerary,
+    after: event.after,
+    sponsor: event.sponsor,
+    road: event.road,
+  };
+}
+
+async function askChatGptCoach(prompt) {
+  const { event, userName, goingCount, hasAvatar } = currentRunnerContext();
+  const recentNotes = labNotes.slice(0, 3).map((note) => ({
+    type: note.type,
+    eventTitle: note.eventTitle,
+    text: note.text,
+    createdAt: note.createdAt,
+  }));
+
+  try {
+    const response = await fetch("/api/ai-coach", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        prompt,
+        context: {
+          runnerName: userName,
+          selectedEvent: labCoachEventContext(event),
+          goingCount,
+          hasProfilePicture: hasAvatar,
+          recentLabNotes: recentNotes,
+        },
+      }),
+    });
+
+    if (!response.ok) return null;
+    const data = await response.json();
+    return typeof data?.reply === "string" && data.reply.trim() ? data : null;
+  } catch {
+    return null;
+  }
+}
+
 function saveLabOutput(type, text) {
   const note = {
     id: `lab-${Date.now()}`,
@@ -2218,7 +2270,7 @@ function renderLabPreview() {
   });
 }
 
-function sendLabCoachPrompt() {
+async function sendLabCoachPrompt() {
   if (!requireAuth("lab")) return;
   const prompt = labCoachInput?.value.trim();
   if (!prompt) {
@@ -2232,17 +2284,40 @@ function sendLabCoachPrompt() {
     return;
   }
   appendCoachBubble("user", prompt);
-  const reply = labCoachReply(prompt);
-  appendCoachBubble("ai", reply);
-  activeLabOutput = reply;
+  if (labCoachInput) labCoachInput.value = "";
+  if (labCoachSendButton) {
+    labCoachSendButton.disabled = true;
+    labCoachSendButton.textContent = "Thinking";
+  }
   showLabWorkbench({
     label: "Coach answer",
-    title: "Latest advice",
-    status: "generated",
-    html: `<p>${escapeLabHtml(reply)}</p>`,
-    actions: `<button class="primary-button" type="button" data-lab-action="save-current">Save answer</button><button class="secondary-button" type="button" data-lab-action="build-plan">Turn into plan</button>`,
+    title: "ChatGPT is checking context",
+    status: "thinking",
+    html: "<p>The coach is reading your selected event, RSVP context, and recent Lab notes.</p>",
   });
-  if (labCoachInput) labCoachInput.value = "";
+
+  try {
+    const chatGptResult = await askChatGptCoach(prompt);
+    const reply = chatGptResult?.reply || labCoachReply(prompt);
+    const source = chatGptResult ? "ChatGPT / OpenAI" : "Local fallback";
+    appendCoachBubble("ai", reply);
+    activeLabOutput = reply;
+    showLabWorkbench({
+      label: "Coach answer",
+      title: "Latest advice",
+      status: chatGptResult ? "ChatGPT" : "local fallback",
+      html: `<p>${escapeLabHtml(reply)}</p><p><strong>Source</strong> ${escapeLabHtml(source)}</p>`,
+      actions: `<button class="primary-button" type="button" data-lab-action="save-current">Save answer</button><button class="secondary-button" type="button" data-lab-action="build-plan">Turn into plan</button>`,
+    });
+    if (!chatGptResult) {
+      showToast("ChatGPT backend is not configured yet. Local coach answered.");
+    }
+  } finally {
+    if (labCoachSendButton) {
+      labCoachSendButton.disabled = false;
+      labCoachSendButton.textContent = "Send";
+    }
+  }
 }
 
 function eventCalendarInviteWindow(event, durationMinutes = 75) {
