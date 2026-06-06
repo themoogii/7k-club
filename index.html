@@ -1,0 +1,1491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7k Running Club ® - Events</title>
+    <meta name="description" content="7K Running Club is a modern running community from Mongolia. Explore run events, RSVP pages, race photos, runner profiles, and the cultural layer behind 7K." />
+    <meta name="keywords" content="running club,7k running club,run events,ulaanbaatar running,marathon,race photos,run club,runner community,fitness culture,running lifestyle" />
+    <meta name="robots" content="index, follow" />
+    <meta name="category" content="Running Culture" />
+    <meta property="og:title" content="7k Running Club ® - Events" />
+    <meta property="og:description" content="A modern event platform and digital clubhouse for 7K Running Club: run drops, RSVP pages, race photos, profiles, and community." />
+    <meta property="og:image" content="https://the7k.club/hero.png" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:alt" content="7k Running Club" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@7kClub" />
+    <meta name="twitter:title" content="7k Running Club ®" />
+    <meta name="twitter:description" content="Run drops, RSVP pages, race photos, profiles, and community for 7K Running Club." />
+    <meta name="twitter:image" content="https://the7k.club/hero.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://the7k.club/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://the7k.club/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://the7k.club/favicon-16x16.png" />
+    <link rel="icon" href="https://the7k.club/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="manifest" href="https://the7k.club/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=57" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="rail">
+        <a class="brand" href="#home" aria-label="7K World home">
+          <span>7k Running Club.</span>
+          <span>digital club house</span>
+        </a>
+        <button class="mobile-nav-toggle" type="button" id="mobileNavToggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#events">Events</a>
+          <a href="#club">Run Club</a>
+          <a href="#karma">Karma Challenge</a>
+          <a href="#lab">7K Lab</a>
+          <a href="#photos">Race Photos</a>
+        </nav>
+        <div class="rail-actions">
+          <div class="account-dropdown" id="accountDropdown">
+            <button class="account-trigger" type="button" id="accountDropdownTrigger" aria-haspopup="menu" aria-expanded="false">
+              <span class="account-trigger-avatar" id="accountTriggerAvatar">7K</span>
+              <span class="account-trigger-label">Account</span>
+              <span class="md-icon" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="account-menu" id="accountDropdownMenu" role="menu" aria-label="Account menu">
+              <span class="account-menu-label" id="accountMenuLabel">7K Account</span>
+              <button type="button" role="menuitem" data-account-menu="profile"><span class="md-icon" aria-hidden="true">person</span>Profile</button>
+              <button type="button" role="menuitem" data-account-menu="account"><span class="md-icon" aria-hidden="true">manage_accounts</span>Account</button>
+              <button type="button" role="menuitem" data-account-menu="setup"><span class="md-icon" aria-hidden="true">edit</span>Profile setup</button>
+              <button type="button" role="menuitem" data-account-menu="heatmap"><span class="md-icon" aria-hidden="true">calendar_view_month</span>Heatmap</button>
+              <button type="button" role="menuitem" data-account-menu="photos"><span class="md-icon" aria-hidden="true">photo_library</span>Photo wallet</button>
+              <i></i>
+              <button type="button" role="menuitem" data-account-menu="auth"><span class="md-icon" aria-hidden="true">login</span><span id="accountAuthMenuText">Sign in</span></button>
+            </div>
+          </div>
+          <label class="night-toggle" aria-label="Night shift mode">
+            <input class="toggle-input" id="nightShiftToggle" type="checkbox" />
+            <span class="toggle-container" aria-hidden="true">
+              <span class="toggle-handle-wrapper">
+                <span class="toggle-handle">
+                  <span class="toggle-handle-knob"></span>
+                  <span class="toggle-handle-bar-wrapper">
+                    <span class="toggle-handle-bar"></span>
+                  </span>
+                </span>
+              </span>
+              <span class="toggle-base">
+                <span class="toggle-base-inside"></span>
+              </span>
+            </span>
+          </label>
+          <button class="nav-action primary" type="button" id="navJoinButton">Join Run</button>
+        </div>
+      </aside>
+
+      <div class="ambient-field" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="runway-ticker" aria-hidden="true">
+        <div>
+          <span>SMALL WINS</span>
+          <span>DAILY GRIND</span>
+          <span>COMPOUND EFFECT</span>
+          <span>47.9184 N / 106.9177 E</span>
+          <span>7K RUNNING CLUB</span>
+          <span>SMALL WINS</span>
+          <span>DAILY GRIND</span>
+          <span>COMPOUND EFFECT</span>
+        </div>
+      </div>
+
+      <main>
+        <nav class="breadcrumb" id="breadcrumbNav" aria-label="Page path"></nav>
+        <section class="page active" data-page="home">
+        <header class="topbar">
+          <div>
+            <p class="overline">Club Command</p>
+            <h1>7K Running Club</h1>
+          </div>
+          <button class="ghost-button" type="button" id="shareClubButton">Share club card</button>
+        </header>
+
+        <section class="hero-panel horizon-hero" aria-labelledby="club-title">
+          <canvas id="homeHorizonCanvas" class="horizon-canvas" aria-hidden="true"></canvas>
+          <div class="horizon-side" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <em>RUN CULTURE</em>
+          </div>
+          <div class="club-intro">
+            <p class="overline">Ulaanbaatar / Modern Run Culture</p>
+            <h2 id="club-title">
+              7K
+              <span class="text-rotate" id="heroTextRotate" aria-live="polite">
+                <span class="sr-only">cultural</span>
+              </span>
+              <span>world.</span>
+            </h2>
+            <p>Run together, RSVP fast, find your photos, and keep your runner identity in one place.</p>
+            <div class="hero-actions">
+              <button class="primary-button" type="button" id="viewCalendarButton">View events</button>
+              <button class="secondary-button" type="button" id="heroJoinButton">Join run club</button>
+            </div>
+          </div>
+
+          <div class="stat-stack" aria-label="Club stats">
+            <button type="button" data-home-action="next-event">
+              <span>Next drop</span>
+              <strong id="nextDropStat">Night Loop 07</strong>
+            </button>
+            <button type="button" data-home-action="club">
+              <span>Club signal</span>
+              <strong>92</strong>
+            </button>
+            <button type="button" data-home-action="events">
+              <span>Going this week</span>
+              <strong id="weeklyGoingStat">184</strong>
+            </button>
+          </div>
+          <div class="horizon-progress" aria-hidden="true">
+            <span>SCROLL</span>
+            <i><b id="homeScrollProgress"></b></i>
+          </div>
+          <div class="hero-stickers" aria-hidden="true">
+            <span>UB</span>
+            <span>7K</span>
+            <span>CLUB</span>
+          </div>
+        </section>
+
+        <section class="tool-grid" id="home-events">
+          <div class="event-column">
+            <div class="section-heading">
+              <div>
+                <p class="overline">Upcoming</p>
+                <h3>Events</h3>
+              </div>
+              <span id="resultCount">4 drops</span>
+            </div>
+
+            <div class="filter-row" aria-label="Event filters">
+              <button class="filter active" type="button" data-filter="all">All</button>
+              <button class="filter" type="button" data-filter="night">Night</button>
+              <button class="filter" type="button" data-filter="beginner">First-timer</button>
+              <button class="filter" type="button" data-filter="coffee">Coffee</button>
+              <button class="filter" type="button" data-filter="stamp">Stamp</button>
+            </div>
+
+            <div class="week-strip" aria-label="Weekly calendar">
+              <button class="day-card active" type="button">
+                <span>Tue</span>
+                <strong>19</strong>
+                <em>Night</em>
+              </button>
+              <button class="day-card" type="button">
+                <span>Fri</span>
+                <strong>22</strong>
+                <em>First</em>
+              </button>
+              <button class="day-card" type="button">
+                <span>Sat</span>
+                <strong>23</strong>
+                <em>Coffee</em>
+              </button>
+              <button class="day-card" type="button">
+                <span>Sun</span>
+                <strong>24</strong>
+                <em>Long</em>
+              </button>
+            </div>
+
+            <div class="cards" id="eventCards" aria-live="polite"></div>
+          </div>
+
+          <aside class="detail-panel" aria-label="Selected event details">
+            <div class="route-map" aria-hidden="true">
+              <svg viewBox="0 0 500 260">
+                <path id="routePath" d="" />
+                <circle id="routeStart" cx="72" cy="178" r="5" />
+              </svg>
+              <span>Route Preview</span>
+            </div>
+
+            <div class="detail-copy">
+              <p class="overline" id="detailClub">7K Running Club</p>
+              <h3 id="detailTitle"></h3>
+              <p id="detailDescription"></p>
+            </div>
+
+            <div class="detail-specs">
+              <div>
+                <span>Date</span>
+                <strong id="detailDate"></strong>
+              </div>
+              <div>
+                <span>Distance</span>
+                <strong id="detailDistance"></strong>
+              </div>
+              <div>
+                <span>Pace</span>
+                <strong id="detailPace"></strong>
+              </div>
+              <div>
+                <span>After</span>
+                <strong id="detailAfter"></strong>
+              </div>
+            </div>
+
+            <div class="stamp-reward">
+              <div class="stamp-mark">7K</div>
+              <div>
+                <span>Stamp Unlock</span>
+                <strong id="detailStamp"></strong>
+              </div>
+            </div>
+
+            <div class="attendees">
+              <div class="avatar-stack" id="avatarStack"></div>
+              <span id="detailGoing"></span>
+            </div>
+
+            <button class="primary-button full" type="button" id="rsvpButton">RSVP</button>
+            <div class="calendar-save-panel" id="calendarSavePanel" hidden>
+              <span>Saved to 7K calendar</span>
+              <strong>Add this run to your personal calendar</strong>
+              <div>
+                <button class="secondary-button" type="button" id="googleCalendarButton">Google Calendar</button>
+                <button class="secondary-button" type="button" id="iosCalendarButton">iOS Calendar</button>
+              </div>
+            </div>
+
+            <div class="share-card" id="shareCard">
+              <span>Share Card</span>
+              <strong id="shareTitle"></strong>
+              <small id="shareMeta"></small>
+            </div>
+            <button class="secondary-button full share-download" type="button" id="downloadRunCardButton">
+              Download run story PNG
+            </button>
+          </aside>
+        </section>
+        </section>
+
+        <section class="page" data-page="events">
+          <header class="topbar">
+            <div>
+              <p class="overline">Events</p>
+              <h1>Run Drops</h1>
+            </div>
+            <button class="ghost-button" type="button" id="calendarJoinButton">Open next event</button>
+          </header>
+
+          <section class="calendar-board">
+            <div class="calendar-hero">
+              <div>
+                <p class="overline">June 2 - 7 / UB</p>
+                <h2>Find the next run.</h2>
+                <div class="calendar-view-toggle" role="navigation" aria-label="Events page sections">
+                  <button class="active" type="button" data-calendar-view="calendar" aria-current="true">
+                    <span class="md-icon" aria-hidden="true">calendar_month</span>
+                    Calendar
+                  </button>
+                  <button type="button" data-calendar-view="list" aria-current="false">
+                    <span class="md-icon" aria-hidden="true">view_list</span>
+                    List
+                  </button>
+                </div>
+                <div class="calendar-status-legend" aria-label="Event status legend">
+                  <span class="is-upcoming">Upcoming</span>
+                  <span class="is-current">Today</span>
+                  <span class="is-past">Past</span>
+                </div>
+              </div>
+              <div class="glass-clock-card" aria-label="Current Ulaanbaatar time">
+                <div class="glass-clock-copy">
+                  <span>Current time</span>
+                  <strong id="glassClockDigital">--:--</strong>
+                </div>
+                <div class="glass-clock">
+                  <div class="glass-clock-face">
+                    <div class="glass-gloss"></div>
+                    <div class="clock-hour-marks" id="clockHourMarks"></div>
+                    <div class="clock-hand hour-hand" id="clockHourHand"></div>
+                    <div class="clock-hand minute-hand" id="clockMinuteHand"></div>
+                    <div class="second-hand-container" id="clockSecondHand">
+                      <div class="second-hand"></div>
+                      <div class="second-hand-counterweight"></div>
+                    </div>
+                    <div class="clock-center-dot"></div>
+                    <div class="clock-logo">7K</div>
+                    <div class="clock-date" id="clockDate">May 19</div>
+                    <div class="clock-timezone">Ulaanbaatar</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="month-calendar three-d-calendar calendar-view-panel" id="eventsCalendarPanel" data-calendar-panel="calendar" aria-label="3D monthly run calendar">
+              <div class="month-calendar-head three-calendar-head">
+                <div>
+                  <p class="overline">3D Wall Calendar</p>
+                  <h3 id="threeCalendarMonth">June 2026</h3>
+                </div>
+                <div class="three-calendar-controls">
+                  <button class="calendar-arrow-button" type="button" id="calendarPrevMonth" aria-label="Previous month">
+                    <span class="md-icon" aria-hidden="true">chevron_left</span>
+                  </button>
+                  <button class="calendar-arrow-button" type="button" id="calendarNextMonth" aria-label="Next month">
+                    <span class="md-icon" aria-hidden="true">chevron_right</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="three-calendar-stage" id="threeCalendarStage">
+                <div class="three-calendar-wall" id="threeCalendarWall" aria-live="polite"></div>
+              </div>
+
+            </section>
+
+            <div class="timeline-list calendar-view-panel" id="eventsListPanel" data-calendar-panel="list">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">This Week</p>
+                <h3>List</h3>
+                </div>
+                <span>RSVP</span>
+              </div>
+              <div class="calendar-event-list" id="calendarEventList"></div>
+            </div>
+
+          </section>
+        </section>
+
+        <section class="page" data-page="event">
+          <header class="topbar">
+            <div>
+              <p class="overline" id="eventPageMeta">7K Event</p>
+              <h1 id="eventPageTitle">Night Loop 07</h1>
+            </div>
+            <button class="ghost-button" type="button" id="eventBackButton">Back to events</button>
+          </header>
+
+          <section class="event-page-grid">
+            <div class="event-hero-card">
+              <p class="overline" id="eventPageHost">Hosted by 7K Running Club</p>
+              <h2 id="eventPageHeadline">City-light 7K with regroup points.</h2>
+              <p id="eventPageDescription">A social run with a collectible stamp and easy regroup points.</p>
+              <div class="event-step-notice" id="eventStepNotice">Step 1 / Choose RSVP status to enter this event page.</div>
+              <div class="event-facts">
+                <span id="eventPageDateTime">Tue 19 / 20:30</span>
+                <span id="eventPageLocation">Sukhbaatar Square</span>
+                <span id="eventPageCapacity">60 capacity</span>
+              </div>
+              <div class="event-page-actions">
+                <button class="primary-button" type="button" id="eventPageRsvpButton">Going</button>
+                <button class="secondary-button" type="button" id="eventPageGoogleButton">Google Calendar</button>
+                <button class="secondary-button" type="button" id="eventPageIosButton">iOS Calendar</button>
+                <button class="secondary-button" type="button" id="eventPublicShareButton">Share invite</button>
+              </div>
+            </div>
+
+            <aside class="event-side-card">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">People</p>
+                  <h3>Who's Going</h3>
+                </div>
+                <span id="eventPageGoing">42 going</span>
+              </div>
+              <div class="rsvp-state-grid">
+                <button class="active" type="button" data-rsvp-state="going"><span id="rsvpGoingCount">42</span><small>Going</small></button>
+                <button type="button" data-rsvp-state="maybe"><span id="rsvpMaybeCount">8</span><small>Maybe</small></button>
+                <button type="button" data-rsvp-state="cant"><span id="rsvpCantCount">3</span><small>Can't Go</small></button>
+              </div>
+              <div class="participant-grid" id="eventParticipantGrid"></div>
+              <div class="attendee-sphere-card" id="attendeeSphereCard">
+                <div class="sphere-copy">
+                  <span>Going Sphere</span>
+                  <strong>Drag the regulars.</strong>
+                </div>
+                <div class="attendee-sphere" id="attendeeSphere" role="list" aria-label="People going to this event"></div>
+                <small>Unlocked after Going registration.</small>
+              </div>
+              <div class="event-sponsor">
+                <span>Sponsor</span>
+                <strong id="eventSponsorName">7K Coffee Cartel</strong>
+              </div>
+            </aside>
+
+            <div class="event-route-card">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">Road</p>
+                  <h3 id="eventRoadName">Central city loop</h3>
+                </div>
+                <span id="eventRouteMeta">7K / Easy-Steady</span>
+              </div>
+              <div class="route-map event-route-map" aria-hidden="true">
+                <svg viewBox="0 0 500 260">
+                  <path id="eventRoutePath" d="" />
+                  <circle id="eventRouteStart" cx="72" cy="178" r="5" />
+                </svg>
+                <span>Route Preview</span>
+              </div>
+            </div>
+
+            <div class="event-itinerary-card">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">Itinerary</p>
+                  <h3>Run Flow</h3>
+                </div>
+                <span>Schedule</span>
+              </div>
+              <div class="itinerary-list" id="eventItineraryList"></div>
+            </div>
+
+            <div class="event-host-card">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">Host Profile</p>
+                  <h3 id="eventHostName">Munkh / 7K</h3>
+                </div>
+                <button class="ghost-button" type="button" id="eventHostProfileButton">View profile</button>
+              </div>
+              <div class="host-proof-grid">
+                <div><span>Hosted runs</span><strong>18</strong></div>
+                <div><span>Total hosted</span><strong>1,284</strong></div>
+                <div><span>Club</span><strong>7K Running</strong></div>
+              </div>
+              <p id="eventHostBio">Hosts social runs, race photo drops, and beginner-safe city loops.</p>
+            </div>
+
+            <div class="event-form-card">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">Registration Form</p>
+                  <h3>Runner Questions</h3>
+                </div>
+                <span>RSVP</span>
+              </div>
+              <div class="event-question-grid">
+                <label>
+                  <span>Emergency contact</span>
+                  <input id="eventEmergencyInput" type="text" placeholder="Name + phone" />
+                </label>
+                <label>
+                  <span>Pace group</span>
+                  <select id="eventPaceGroupInput">
+                    <option>Easy / social</option>
+                    <option>Steady</option>
+                    <option>Race arc</option>
+                  </select>
+                </label>
+                <label class="avatar-upload-field">
+                  <span>Profile picture</span>
+                  <input id="eventProfilePhotoInput" type="file" accept="image/*" />
+                  <small>Optional. If empty, we use your first letter.</small>
+                </label>
+                <label>
+                  <span>Anything we should know?</span>
+                  <textarea id="eventNotesInput" rows="3" placeholder="Injury, first run, no coffee, etc."></textarea>
+                </label>
+              </div>
+              <button class="primary-button full" type="button" id="eventCompleteRegistrationButton">Complete registration</button>
+            </div>
+
+            <div class="event-confirmation-card" id="eventConfirmationCard">
+              <div class="confirmation-badge">
+                <span class="md-icon" aria-hidden="true">check</span>
+              </div>
+              <p class="overline">You're In</p>
+              <h3 id="eventConfirmationTitle">Night Loop 07 is saved.</h3>
+              <p id="eventConfirmationCopy">Your RSVP is locked. Event wall, route, and calendar tools are now open.</p>
+              <div class="confirmation-ticket">
+                <span>Status</span>
+                <strong id="eventConfirmationStatus">Going</strong>
+                <small id="eventConfirmationMeta">Tue 19 / 20:30 / 7K</small>
+              </div>
+              <div class="event-page-actions">
+                <button class="primary-button" type="button" id="eventConfirmationWallButton">Open event wall</button>
+                <button class="secondary-button" type="button" id="eventConfirmationCalendarButton">Save calendar</button>
+                <button class="secondary-button" type="button" id="eventConfirmationShareButton">Share invite</button>
+              </div>
+            </div>
+
+            <div class="event-feed-card">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">Community Feed</p>
+                  <h3>Wall</h3>
+                </div>
+                <span>Live</span>
+              </div>
+              <div class="comment-list" id="eventCommentList"></div>
+              <div class="comment-compose">
+                <input id="eventCommentInput" type="text" placeholder="Ask a question, hype the group, mention a friend..." />
+                <button class="secondary-button" type="button" id="eventCommentButton">Post</button>
+              </div>
+            </div>
+
+          </section>
+        </section>
+
+        <section class="page" data-page="karma">
+          <header class="karma-manifesto">
+            <p>LOCK MONEY. HIT THE GOAL. GET IT BACK. MISS IT, AND YOUR KARMA FUNDS THE RUNNERS WHO DID THE WORK.</p>
+          </header>
+
+          <section class="pledge-section" aria-labelledby="pledge-title">
+            <div class="pledge-copy">
+              <p class="overline">Karma Challenge</p>
+              <h2 id="pledge-title">Karma</h2>
+              <p>Goal-based commitment pools for runners who need stakes, not motivational quotes.</p>
+              <div class="hero-actions">
+                <button class="primary-button" type="button" id="joinPledgeButton">Join challenge</button>
+                <button class="secondary-button" type="button" id="pledgeRulesButton">View rules</button>
+              </div>
+            </div>
+
+            <div class="pledge-card" aria-label="Featured commitment challenge">
+              <div class="pledge-card-head">
+                <span>Live Challenge</span>
+                <strong>5 Day Karma Lock</strong>
+              </div>
+              <div class="pledge-meter" aria-hidden="true">
+                <i style="--value:72%"></i>
+              </div>
+              <div class="pledge-stats">
+                <div><span>Goal</span><strong>10K steps x 5</strong></div>
+                <div><span>Commitment</span><strong>20,000 MNT</strong></div>
+                <div><span>Karma rule</span><strong>Back + pool share</strong></div>
+              </div>
+              <p>Finishers get their commitment back and split half of the money forfeited by missed goals.</p>
+            </div>
+          </section>
+
+          <section class="karma-break-section" aria-labelledby="karmaBreakTitle">
+            <div class="karma-break-copy">
+              <p class="overline">Interactive Challenge Card</p>
+              <h2 id="karmaBreakTitle">Shake the commitment.</h2>
+              <p>Tap to enter the challenge. Drag it too hard and the card breaks, just like missed goals break the pool.</p>
+            </div>
+
+            <div class="karma-break-card" id="karmaBreakCard" role="button" tabindex="0" aria-label="Open Karma Challenge entry">
+              <div class="karma-break-remnant" aria-hidden="true">
+                <strong>GONE</strong>
+                <span>Respawning commitment</span>
+                <i><b id="karmaBreakRespawn"></b></i>
+              </div>
+              <div class="karma-break-debris" id="karmaBreakDebris" aria-hidden="true"></div>
+              <div class="karma-break-face" id="karmaBreakFace">
+                <div>
+                  <div class="karma-break-head">
+                    <h3>5 Day Karma Lock</h3>
+                    <span></span>
+                  </div>
+                  <p>10K steps daily. 20,000 MNT locked. Finishers get money back plus pool split.</p>
+                </div>
+                <svg class="karma-cracks" id="karmaCracks" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="crack-a" d="M0 20 L15 25 L8 40 L20 50" />
+                  <path class="crack-b" d="M50 100 L55 80 L45 70 L60 55" />
+                  <path class="crack-c" d="M20 0 L25 20 L40 25 L35 45 L50 50" />
+                </svg>
+                <div class="karma-break-foot">
+                  <span>Fig. 07</span>
+                  <span id="karmaBreakDamage">INTACT</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="karma-gallery" aria-label="Karma challenge signal cards">
+            <article>
+              <span>01</span>
+              <strong>LOCK</strong>
+              <p>20,000 MNT commitment.</p>
+              <button class="secondary-button" type="button" data-karma-card="lock">Lock commitment</button>
+            </article>
+            <article>
+              <span>02</span>
+              <strong>RUN</strong>
+              <p>10K steps for 5 days.</p>
+              <button class="secondary-button" type="button" data-karma-card="run">View goal</button>
+            </article>
+            <article>
+              <span>03</span>
+              <strong>RETURN</strong>
+              <p>Money back + pool split.</p>
+              <button class="secondary-button" type="button" data-karma-card="return">See reward</button>
+            </article>
+          </section>
+        </section>
+
+        <section class="page" data-page="karma-entry">
+          <header class="karma-manifesto">
+            <p>FIVE DAYS. TEN THOUSAND STEPS A DAY. FINISHERS GET THEIR MONEY BACK AND SPLIT HALF OF THE MISSED-GOAL POOL.</p>
+            <button class="ghost-button" type="button" id="karmaBackButton">Back to Karma</button>
+          </header>
+
+          <section class="karma-entry-grid">
+            <div class="karma-entry-hero">
+              <p class="overline">Commitment Pool</p>
+              <h2>10K steps for 5 days.</h2>
+              <p>Lock 20,000 MNT. Finish the goal and get your commitment back plus a share of half the missed-goal pool.</p>
+              <div class="event-page-actions">
+                <button class="primary-button" type="button" id="karmaLockButton">Lock 20,000 MNT</button>
+                <button class="secondary-button" type="button" id="karmaShareButton">Share challenge</button>
+              </div>
+            </div>
+
+            <aside class="karma-entry-card">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">Live Pool</p>
+                  <h3>72 runners locked</h3>
+                </div>
+                <span>3 days left</span>
+              </div>
+              <div class="pledge-meter" aria-hidden="true">
+                <i style="--value:72%"></i>
+              </div>
+              <div class="pledge-stats">
+                <div><span>Goal</span><strong>10K steps x 5</strong></div>
+                <div><span>Commitment</span><strong>20,000 MNT</strong></div>
+                <div><span>Reward</span><strong>Back + pool split</strong></div>
+              </div>
+            </aside>
+
+            <div class="karma-rule-card">
+              <p class="overline">How It Works</p>
+              <div class="itinerary-list">
+                <div><span>01</span><strong>Join before the window starts.</strong></div>
+                <div><span>02</span><strong>Hit 10K steps every day for 5 days.</strong></div>
+                <div><span>03</span><strong>Finishers get money back plus half of the failed pool split between them.</strong></div>
+              </div>
+            </div>
+
+            <div class="karma-rule-card accent-card">
+              <p class="overline">Proof</p>
+              <h3>Strava / steps sync next.</h3>
+              <p>For MVP this page shows the challenge flow. Later, completion can verify from Strava, Apple Health, or admin approval.</p>
+            </div>
+          </section>
+        </section>
+
+        <section class="page lab-page" data-page="lab">
+          <header class="topbar lab-topbar">
+            <div>
+              <p class="overline">Private Coach Console</p>
+              <h1>7K Lab</h1>
+            </div>
+            <button class="ghost-button" type="button" id="labHistoryButton">Lab history</button>
+          </header>
+
+          <section class="lab-shell">
+            <article class="lab-locked-card" id="labLockedCard">
+              <div class="lab-lock-terminal" aria-hidden="true">
+                <span>ACCESS CHECK</span>
+                <strong>LOCKED</strong>
+                <i>coach.exe is warming up</i>
+              </div>
+              <div class="lab-lock-copy">
+                <p class="overline">Coach is locked</p>
+                <h2>Sign in first. The coach refuses to yell at anonymous calves.</h2>
+                <p>Form checks, chat notes, plans, and FreeMoCap sessions save to your runner profile.</p>
+                <div class="lab-actions">
+                  <button class="primary-button" type="button" id="labSignInButton">Unlock</button>
+                  <button class="secondary-button" type="button" id="labPreviewButton">Preview</button>
+                </div>
+              </div>
+            </article>
+
+            <div class="lab-unlocked-grid" id="labUnlockedGrid">
+              <article class="lab-hero-card">
+                <div class="lab-console-header">
+                  <div>
+                    <p class="overline">Live AI Coach</p>
+                    <h2>Coach Console</h2>
+                  </div>
+                  <span>online</span>
+                </div>
+                <div class="lab-wave-panel" aria-hidden="true">
+                  <canvas id="labWaveCanvas"></canvas>
+                  <div class="lab-wave-copy">
+                    <span>Form signal</span>
+                    <strong>AI Coach</strong>
+                    <small>pace / motion / recovery model</small>
+                  </div>
+                  <div class="lab-wave-tags">
+                    <span>7K</span>
+                    <span>FreeMoCap</span>
+                    <span>Coach</span>
+                  </div>
+                </div>
+                <div class="coach-chat-card" aria-label="7K AI coach chat preview">
+                  <div class="coach-transcript" id="labCoachTranscript" aria-live="polite">
+                    <div class="coach-bubble coach-bubble-user">I RSVP'd for Night Loop 07. How should I prepare?</div>
+                    <div class="coach-bubble coach-bubble-ai">Keep the first 2K easy, bring reflective gear, and do 4 relaxed strides before rollout. No hero moves before coffee.</div>
+                  </div>
+                  <div class="coach-input-row">
+                    <input type="text" id="labCoachInput" placeholder="Ask the 7K coach..." />
+                    <button class="primary-button" type="button" id="labCoachSendButton">Send</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="lab-tool-card">
+                <span class="md-icon" aria-hidden="true">directions_run</span>
+                <p class="overline">Form Check</p>
+                <h3>FreeMoCap running analysis</h3>
+                <p>Upload a running clip later and turn it into posture, arm swing, cadence, and imbalance feedback.</p>
+                <input class="lab-file-input" id="labFormVideoInput" type="file" accept="video/*,image/*" />
+                <button class="secondary-button" type="button" id="labFormCheckButton">Start form check</button>
+              </article>
+
+              <article class="lab-tool-card">
+                <span class="md-icon" aria-hidden="true">calendar_month</span>
+                <p class="overline">Run Plan</p>
+                <h3>Weekly plan from your profile</h3>
+                <p>Use RSVP history, pace preference, and challenge goals to create a simple training rhythm.</p>
+                <button class="secondary-button" type="button" id="labPlanButton">Build plan</button>
+              </article>
+
+              <article class="lab-tool-card">
+                <span class="md-icon" aria-hidden="true">history</span>
+                <p class="overline">Lab Notes</p>
+                <h3>Saved coach memory</h3>
+                <p>Keep form-check results, coach answers, and progress notes attached to your runner passport.</p>
+                <button class="secondary-button" type="button" id="labSaveNoteButton">Save note</button>
+              </article>
+
+              <article class="lab-workbench-card" id="labWorkbenchCard" hidden>
+                <div class="lab-workbench-head">
+                  <div>
+                    <p class="overline" id="labWorkbenchLabel">Lab output</p>
+                    <h3 id="labWorkbenchTitle">Coach memory</h3>
+                  </div>
+                  <span id="labWorkbenchStatus">ready</span>
+                </div>
+                <div class="lab-workbench-body" id="labWorkbenchBody">
+                  <p>Ask the coach, start a form check, build a plan, or open history. Output appears here and can be saved to your Lab notes.</p>
+                </div>
+                <div class="lab-workbench-actions" id="labWorkbenchActions"></div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="page" data-page="club">
+          <header class="topbar">
+            <div>
+              <p class="overline">Run Club</p>
+              <h1>7K Running Club</h1>
+            </div>
+            <button class="ghost-button" type="button" id="clubShareTopButton">Share club</button>
+          </header>
+
+          <section class="brand-story-page">
+            <div class="brand-grunge-strip" aria-hidden="true"></div>
+
+            <section class="brand-text-block">
+              <p class="overline">Brand Story</p>
+              <h2>That is how it all started.</h2>
+              <p>Founder Billy ran 7 kilometers on the most random day to lose weight right after quitting his 9-5 job. The idea of founding a running club ecosystem came to his mind when he consistently ran for 90 days and started seeing real results. So, he founded the © 7k Running Club along with Inji and Moogi, who resonated with his vision. That's how © 7k was born and became a reality. We haven't been building a brand. We've been building a cult that lives and breathes the © 7k lifestyle.</p>
+            </section>
+
+            <section class="vision-section" aria-labelledby="vision-title">
+              <p class="overline">The © 7K Vision</p>
+              <h2 id="vision-title">Running club at the center.</h2>
+              <div class="vision-map" aria-label="7K vision map">
+                <img class="vision-image" src="https://www.the7k.club/ecosystem.png" alt="Hydration products, international races, performance apparel, and national sports brand vision map" />
+              </div>
+            </section>
+
+            <section class="founders-section" aria-labelledby="founders-title">
+              <p class="overline">Our Founders</p>
+              <h2 id="founders-title">Three people, one weirdly specific run culture.</h2>
+              <div class="founder-grid">
+                <article class="founder-card founder-billy">
+                  <div class="founder-photo" aria-hidden="true"><span>Billy</span></div>
+                  <h3>Billy</h3>
+                  <strong>Founder, Creative Director</strong>
+                  <p>Billy is a former corporate senior manager turned tech entrepreneur and the founder of Bnb Lab, a creative consulting agency. Known for building tech-leveraged businesses from inception to profitability.</p>
+                </article>
+                <article class="founder-card founder-inji">
+                  <div class="founder-photo" aria-hidden="true"><span>Inji</span></div>
+                  <h3>Inji</h3>
+                  <strong>Co-founder, Marketing Director</strong>
+                  <p>Inji is an entrepreneur who has previously founded multiple ventures, including Gobi Scholars Academy and I&amp;C Agency. Beyond business, he's a visionary leader and a runner.</p>
+                </article>
+                <article class="founder-card founder-moogii">
+                  <div class="founder-photo" aria-hidden="true"><span>Moogii</span></div>
+                  <h3>Moogii</h3>
+                  <strong>Co-founder, Operations Director</strong>
+                  <p>Moogii is the mastermind behind © 7k's content strategy - a marketing genius who knows how to build an authentic audience and help the brand grow while staying true to its core.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="community-section" aria-labelledby="community-title">
+              <p class="overline">Our Community</p>
+              <h2 id="community-title">Open weekly sessions. Real people. No weird gatekeeping.</h2>
+              <div class="community-photo">
+                <img src="https://www.the7k.club/community.jpg" alt="7K Running Club community" />
+                <button class="primary-button" type="button" id="joinClubButton">Join us</button>
+              </div>
+              <p>As a running community, we host weekly public running sessions open to runners of all levels who want to vibe with us and experience the magic of running with like-minded individuals. Beyond our weekly runs, we occasionally form training groups to compete in races internationally. © 7k Running Club is a pioneering crew with over 500 members, reaching more than half a million people nationwide. Stay tuned, come run with us, and grow together.</p>
+              <div class="club-brand-actions">
+                <button class="secondary-button" type="button" id="downloadClubCardButton">Download club story PNG</button>
+              </div>
+            </section>
+          </section>
+        </section>
+
+        <section class="page" data-page="profile">
+          <header class="topbar">
+            <div>
+              <p class="overline">Runner Identity</p>
+              <h1>Munkh</h1>
+            </div>
+            <button class="ghost-button" type="button" id="shareProfileButton">Share profile + passport</button>
+          </header>
+
+          <section class="profile-grid">
+            <div class="identity-card">
+              <div class="profile-photo" aria-hidden="true">MK</div>
+              <p class="overline">Archetype</p>
+              <h2>Night Runner</h2>
+              <p>After-dark miles. Black gear. Streetlight peace.</p>
+              <div class="event-tags">
+                <span class="signal">Urban Loops</span>
+                <span>Coffee After</span>
+                <span>Controlled Suffering</span>
+              </div>
+            </div>
+
+            <div class="passport-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">Passport</p>
+                  <h3>Collected Stamps</h3>
+                </div>
+                <span>6 unlocked</span>
+              </div>
+              <div class="passport-grid">
+                <span>Night</span><span>Coffee</span><span>Rain</span><span>First</span><span>7K</span><span>UB</span>
+              </div>
+            </div>
+
+            <div class="heatmap-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="overline">Weekly Rhythm</p>
+                  <h3>Heatmap</h3>
+                </div>
+                <span>Tuesday loyalist</span>
+              </div>
+              <div class="heatmap" aria-label="Weekly activity heatmap">
+                <i></i><i></i><i class="hot"></i><i></i><i class="warm"></i><i class="hot"></i><i class="warm"></i>
+                <i></i><i class="warm"></i><i class="hot"></i><i></i><i></i><i class="warm"></i><i></i>
+                <i class="warm"></i><i></i><i class="hot"></i><i></i><i class="warm"></i><i></i><i class="hot"></i>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="page profile-subpage" data-page="profile-account">
+          <header class="topbar">
+            <div>
+              <p class="overline">Profile / Account</p>
+              <h1>Sign in your way</h1>
+            </div>
+            <button class="ghost-button" type="button" data-profile-action="profile">Back to profile</button>
+          </header>
+          <section class="profile-subgrid">
+            <article class="profile-subcard">
+              <span>Account methods</span>
+              <strong>Google, Apple, phone, email.</strong>
+              <p>Use one account for RSVP, race photos, Karma Challenge, saved profile, and reminders.</p>
+              <div class="account-actions">
+                <button class="primary-button" type="button" id="profileAccountAuthButton">Sign in / edit account</button>
+                <button class="ghost-button" type="button" id="profileAccountSignOutButton">Sign out</button>
+              </div>
+            </article>
+            <article class="profile-subcard">
+              <span>Status</span>
+              <strong id="profileAccountStatus">Guest mode</strong>
+              <p>Once signed in, your RSVP and event profile stays attached to every run.</p>
+            </article>
+          </section>
+        </section>
+
+        <section class="page profile-subpage" data-page="profile-setup">
+          <header class="topbar">
+            <div>
+              <p class="overline">Profile / Setup</p>
+              <h1>Instagram + Strava</h1>
+            </div>
+            <button class="ghost-button" type="button" data-profile-action="profile">Back to profile</button>
+          </header>
+          <section class="profile-subgrid">
+            <article class="profile-subcard">
+              <span>Public identity</span>
+              <strong>Make your runner card recognizable.</strong>
+              <div class="profile-crop-stage">
+                <div class="profile-crop-preview" id="profileCropPreview">MK</div>
+              </div>
+              <div class="dialog-grid">
+                <label class="profile-photo-upload-field">
+                  <span>Profile picture</span>
+                  <input id="profilePhotoInput" type="file" accept="image/*" />
+                </label>
+                <label><span>Instagram</span><input type="text" placeholder="@yourhandle" /></label>
+                <label><span>Strava</span><input type="text" placeholder="Connect Strava athlete ID" /></label>
+                <label><span>Favorite pace</span><input type="text" placeholder="Easy / social / race arc" /></label>
+                <label><span>Club role</span><input type="text" placeholder="Member, host, pacer..." /></label>
+              </div>
+              <div class="crop-control-grid">
+                <label><span>Zoom</span><input id="profilePhotoZoom" type="range" min="100" max="160" value="112" /></label>
+                <label><span>Horizontal</span><input id="profilePhotoX" type="range" min="0" max="100" value="50" /></label>
+                <label><span>Vertical</span><input id="profilePhotoY" type="range" min="0" max="100" value="50" /></label>
+              </div>
+              <div class="account-actions">
+                <button class="primary-button" type="button" data-profile-save="setup">Save profile setup</button>
+                <button class="secondary-button" type="button" id="saveProfilePhotoButton">Save picture crop</button>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="page profile-subpage" data-page="profile-regulars">
+          <header class="topbar">
+            <div>
+              <p class="overline">Profile / Event Social</p>
+              <h1>Regulars</h1>
+            </div>
+            <button class="ghost-button" type="button" data-profile-action="profile">Back to profile</button>
+          </header>
+          <section class="profile-subgrid regular-grid">
+            <article class="profile-subcard"><span>AN</span><strong>Anu</strong><p>4 events together / coffee after loyalist.</p></article>
+            <article class="profile-subcard"><span>MK</span><strong>Munkh</strong><p>Host / night loop regular.</p></article>
+            <article class="profile-subcard"><span>BO</span><strong>Bolor</strong><p>First-timer Friday streak.</p></article>
+          </section>
+        </section>
+
+        <section class="page profile-subpage" data-page="profile-notifications">
+          <header class="topbar">
+            <div>
+              <p class="overline">Profile / Notifications</p>
+              <h1>Contact reminders</h1>
+            </div>
+            <button class="ghost-button" type="button" data-profile-action="profile">Back to profile</button>
+          </header>
+          <section class="profile-subgrid">
+            <article class="profile-subcard">
+              <span>Reminders</span>
+              <strong>Choose what reaches you.</strong>
+              <div class="notification-list">
+                <label><input type="checkbox" checked /> RSVP confirmations</label>
+                <label><input type="checkbox" checked /> Event changes</label>
+                <label><input type="checkbox" checked /> 24h run reminder</label>
+                <label><input type="checkbox" /> Comment replies</label>
+              </div>
+              <button class="primary-button" type="button" data-profile-save="notifications">Save notification settings</button>
+            </article>
+          </section>
+        </section>
+
+        <section class="page profile-subpage" data-page="profile-heatmap">
+          <header class="topbar">
+            <div>
+              <p class="overline">Profile / Participation</p>
+              <h1>Show-up heatmap</h1>
+            </div>
+            <button class="ghost-button" type="button" data-profile-action="profile">Back to profile</button>
+          </header>
+          <section class="profile-subgrid">
+            <article class="profile-subcard">
+              <span>Participation rhythm</span>
+              <strong>Attendance, streaks, no-shows.</strong>
+              <div class="heatmap heatmap-large" aria-label="Detailed show-up heatmap">
+                <i></i><i class="warm"></i><i class="hot"></i><i></i><i class="warm"></i><i class="hot"></i><i class="warm"></i>
+                <i class="warm"></i><i></i><i class="hot"></i><i class="warm"></i><i></i><i class="warm"></i><i class="hot"></i>
+                <i></i><i class="warm"></i><i class="hot"></i><i></i><i class="warm"></i><i></i><i class="hot"></i>
+                <i class="hot"></i><i></i><i class="warm"></i><i></i><i class="hot"></i><i class="warm"></i><i></i>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="page" data-page="photos">
+          <header class="topbar">
+            <div>
+              <p class="overline">Race Photos</p>
+              <h1>High Quality Race Archive</h1>
+            </div>
+            <button class="ghost-button" type="button" id="photoHelpButton">How it works</button>
+          </header>
+
+          <section class="race-photo-page">
+            <div class="race-photo-hero">
+              <div>
+                <p class="overline">For every race we organize</p>
+                <h2>Find your race photo by bib.</h2>
+              <p>Search your bib, open the original, download HQ.</p>
+              </div>
+              <div class="photo-stats">
+                <div><span>Selected race</span><strong id="selectedRaceStat">Ulaanbaatar Marathon 2026</strong></div>
+                <div><span>Photos stored</span><strong id="photoCountStat">3,284</strong></div>
+                <div><span>Bib search</span><strong>Ready</strong></div>
+              </div>
+            </div>
+
+            <div class="race-folder-grid" id="raceFolderGrid" aria-label="Race folders"></div>
+
+            <div class="photo-search-row">
+              <input id="photoSearchInput" type="search" placeholder="Search bib number, name, race, club..." />
+              <button class="secondary-button" type="button" id="photoSearchButton">Search photos</button>
+            </div>
+
+            <div class="photo-grid" id="racePhotoGrid" aria-live="polite">
+              <article class="race-photo-card">
+                <div class="photo-thumb photo-a"><span>7K</span></div>
+                <strong>Bib 0241 / Finish kick</strong>
+                <small>UB City 7K / full-res available</small>
+                <button type="button" data-download-photo>Download HQ</button>
+              </article>
+              <article class="race-photo-card">
+                <div class="photo-thumb photo-b"><span>7K</span></div>
+                <strong>Bib 1188 / Coffee crew</strong>
+                <small>Street Energy / full-res available</small>
+                <button type="button" data-download-photo>Download HQ</button>
+              </article>
+              <article class="race-photo-card">
+                <div class="photo-thumb photo-c"><span>7K</span></div>
+                <strong>Start wave 03</strong>
+                <small>Start Line / full-res available</small>
+                <button type="button" data-download-photo>Download HQ</button>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="page" data-page="admin">
+          <header class="topbar">
+            <div>
+              <p class="overline">Hidden Admin Panel</p>
+              <h1>Club Control</h1>
+            </div>
+            <button class="ghost-button" type="button" id="adminBackButton">Back to site</button>
+          </header>
+
+          <section class="admin-grid">
+            <div class="admin-command-panel admin-boundary-card">
+              <p class="overline">Public Page Boundary</p>
+              <h2>What customers see.</h2>
+              <p>Public event pages stay social and simple: RSVP, save calendar, share invite, route, itinerary, host, sponsor, who's going, and wall comments.</p>
+              <div class="admin-feature-list" aria-label="Public page features">
+                <span>RSVP flow</span>
+                <span>Calendar save</span>
+                <span>Invite sharing</span>
+                <span>Route + itinerary</span>
+                <span>Who's going</span>
+                <span>Event wall</span>
+              </div>
+            </div>
+
+            <div class="admin-command-panel admin-boundary-card">
+              <p class="overline">Admin-Only Boundary</p>
+              <h2>What stays hidden.</h2>
+              <p>Operational controls live only here: drafts, publishing, QR download, blasts, photo uploads, Strava route import, roles, analytics, and Karma ledger.</p>
+              <div class="admin-feature-list" aria-label="Admin-only tools">
+                <span>Draft + publish</span>
+                <span>QR assets</span>
+                <span>Blasts</span>
+                <span>Photo uploads</span>
+                <span>Strava routes</span>
+                <span>Karma ledger</span>
+              </div>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Events</p>
+              <h2>Create a run invite.</h2>
+              <p>Build Partiful-style event cards, RSVP pages, and calendar-save links from one place.</p>
+              <button class="primary-button" type="button" data-open-create>Create event</button>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Attendance Dashboard</p>
+              <h2>RSVP and check-in.</h2>
+              <p>Track Going, Maybe, Can't Go, daily RSVP growth, QR check-ins, no-shows, and CSV export.</p>
+              <div class="admin-metric-grid">
+                <div><span>Going</span><strong>184</strong></div>
+                <div><span>Maybe</span><strong>36</strong></div>
+                <div><span>Checked in</span><strong>71%</strong></div>
+              </div>
+              <button class="secondary-button" type="button" id="exportCsvButton">Export CSV</button>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Publish + Share</p>
+              <h2>Event link and QR.</h2>
+              <p>Generate public invite links, QR assets, and share cards for the currently selected run.</p>
+              <div class="qr-share-grid admin-qr-share">
+                <div class="qr-preview" id="eventQrBox">
+                  <img id="eventQrImage" alt="Event QR code" />
+                </div>
+                <div>
+                  <strong>Selected event share kit</strong>
+                  <span class="admin-public-link" id="eventPublicUrl">7k.club/e/night-loop-07</span>
+                  <p>Copy the public URL, open the share sheet, or download the QR for posters and group chats.</p>
+                  <div class="event-page-actions">
+                    <button class="secondary-button" type="button" id="eventCopyLinkButton">Copy public link</button>
+                    <button class="secondary-button" type="button" id="eventShareButton">Share invite</button>
+                    <button class="secondary-button" type="button" id="eventDownloadQrButton">Download QR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Blasts + Reminders</p>
+              <h2>Message runners.</h2>
+              <p>Send announcements by RSVP state through email, push, and in-app notifications. History is saved.</p>
+              <div class="blast-filter-row">
+                <button type="button">Everyone</button>
+                <button type="button">Going</button>
+                <button type="button">Maybe</button>
+                <button type="button">Can't Go</button>
+              </div>
+              <button class="secondary-button" type="button" id="scheduleReminderButton">Schedule reminder</button>
+              <button class="secondary-button" type="button" id="eventBlastButton">Send blast</button>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Race Photos</p>
+              <h2>Upload official race photos.</h2>
+              <p>Select race and zone before upload so photos stay inside the correct archive.</p>
+              <div class="photo-admin-form">
+                <div class="admin-select-grid">
+                  <label>
+                    <span>Race</span>
+                    <select id="uploadRaceSelect">
+                      <option>Ulaanbaatar Marathon 2026</option>
+                      <option>Darkhan Marathon 2026</option>
+                      <option>Erdenet Half Marathon 2026</option>
+                      <option>7K Night Race 2026</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Race zone</span>
+                    <select id="uploadZoneSelect">
+                      <option>Start Line</option>
+                      <option>Finish Line</option>
+                      <option>Course / Street Energy</option>
+                      <option>Podium / Awards</option>
+                      <option>Run Club Village</option>
+                    </select>
+                  </label>
+                </div>
+                <label class="race-upload-zone">
+                  <input id="racePhotoUpload" type="file" accept="image/*" multiple />
+                  <span>Drop or choose high quality race photos</span>
+                  <small>HQ originals / AI bib scan / stored by selected race</small>
+                </label>
+              </div>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Karma Challenge</p>
+              <h2>Create a karma pool.</h2>
+              <p>Set a goal, time window, commitment amount, and reward split for successful runners.</p>
+              <div class="challenge-builder">
+                <label>
+                  <span>Challenge name</span>
+                  <input id="challengeNameInput" type="text" value="5 Day Karma Lock" />
+                </label>
+                <div class="admin-select-grid">
+                  <label>
+                    <span>Goal</span>
+                    <input id="challengeGoalInput" type="text" value="10K steps for 5 days" />
+                  </label>
+                  <label>
+                    <span>Commitment</span>
+                    <input id="challengeCommitmentInput" type="text" value="20,000 MNT" />
+                  </label>
+                </div>
+                <label>
+                  <span>Reward rule</span>
+                  <input id="challengeRewardInput" type="text" value="Finishers get commitment back + split 50% of missed-goal pool" />
+                </label>
+                <button class="primary-button" type="button" id="publishChallengeButton">Publish challenge</button>
+              </div>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Karma Ledger</p>
+              <h2>Track money flow.</h2>
+              <p>See who joined, who paid, who completed, who got commitment back, and who received split money.</p>
+              <div class="admin-metric-grid">
+                <div><span>Paid</span><strong>72</strong></div>
+                <div><span>Returned</span><strong>49</strong></div>
+                <div><span>Split pool</span><strong>460K</strong></div>
+              </div>
+              <button class="secondary-button" type="button" data-admin-action="karma-ledger">Open ledger</button>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Club Information</p>
+              <h2>Edit club profile.</h2>
+              <p>Update logo, bio, city, meeting points, socials, sponsors, safety rules, and public club card.</p>
+              <button class="secondary-button" type="button" data-admin-action="club-info">Edit club info</button>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Members + Roles</p>
+              <h2>Control access.</h2>
+              <p>Manage guests, members, hosts, co-hosts, admins, signups, blocked users, and invite-only tools.</p>
+              <div class="blast-filter-row">
+                <button type="button">Guest</button>
+                <button type="button">Member</button>
+                <button type="button">Host</button>
+                <button type="button">Admin</button>
+              </div>
+              <button class="secondary-button" type="button" data-admin-action="roles">Manage roles</button>
+            </div>
+
+            <div class="admin-command-panel">
+              <p class="overline">Growth Analytics</p>
+              <h2>Know the funnel.</h2>
+              <p>Track website visits, invite-link conversions, account creation, repeat attendance, and event drop-off.</p>
+              <div class="admin-metric-grid">
+                <div><span>Accounts</span><strong>326</strong></div>
+                <div><span>Invite RSVP</span><strong>38%</strong></div>
+                <div><span>Repeaters</span><strong>61%</strong></div>
+              </div>
+              <button class="secondary-button" type="button" data-admin-action="analytics">Open analytics</button>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <dialog class="auth-dialog" id="authDialog" aria-labelledby="authDialogTitle">
+      <form method="dialog" class="auth-shell">
+        <div class="dialog-head">
+          <div>
+            <p class="overline">7K Account</p>
+            <h3 id="authDialogTitle">Sign in or create account</h3>
+          </div>
+          <button class="icon-button" type="button" id="closeAuthDialogButton" aria-label="Close account sign in">×</button>
+        </div>
+
+        <div class="auth-copy">
+          <strong>One profile for RSVP, race photos, Karma Challenge, and run history.</strong>
+          <span id="authModeLabel">Choose how you want to enter the club house.</span>
+        </div>
+
+        <div class="auth-provider-grid">
+          <button class="auth-provider google" type="button" id="googleAuthButton">
+            <span>G</span>
+            Continue with Google
+          </button>
+          <button class="auth-provider apple" type="button" id="appleAuthButton">
+            <span>A</span>
+            Continue with Apple
+          </button>
+        </div>
+
+        <div class="auth-divider"><span>or use contact</span></div>
+
+        <div class="auth-tabs" role="tablist" aria-label="Account method">
+          <button class="active" type="button" data-auth-method="phone">Phone</button>
+          <button type="button" data-auth-method="email">Email</button>
+        </div>
+
+        <div class="auth-method active" data-auth-panel="phone">
+          <label>
+            <span>Phone number</span>
+            <input id="authPhoneInput" type="tel" inputmode="tel" placeholder="+976 9911 2233" autocomplete="tel" />
+          </label>
+          <div class="auth-inline">
+            <button class="secondary-button" type="button" id="sendPhoneCodeButton">Send code</button>
+            <input id="authCodeInput" type="text" inputmode="numeric" maxlength="6" placeholder="123456" aria-label="Verification code" />
+          </div>
+          <button class="primary-button" type="button" id="verifyPhoneButton">Verify phone</button>
+        </div>
+
+        <div class="auth-method" data-auth-panel="email">
+          <label>
+            <span>Email</span>
+            <input id="authEmailInput" type="email" placeholder="you@example.com" autocomplete="email" />
+          </label>
+          <label>
+            <span>Name</span>
+            <input id="authNameInput" type="text" placeholder="Runner name" autocomplete="name" />
+          </label>
+          <button class="primary-button" type="button" id="emailAuthButton">Continue with email</button>
+        </div>
+
+        <p class="auth-note">Your account connects RSVP, photos, Karma Challenge, and profile history.</p>
+      </form>
+    </dialog>
+
+    <dialog class="event-dialog event-builder" id="eventDialog" aria-labelledby="eventDialogTitle">
+      <form method="dialog">
+        <div class="dialog-head">
+          <div>
+            <p class="overline">7K Events</p>
+            <h3 id="eventDialogTitle">Create run invite</h3>
+          </div>
+          <button class="icon-button" type="button" id="closeDialogButton" aria-label="Close event creator">×</button>
+        </div>
+        <div class="event-status-strip">
+          <span>Draft mode</span>
+          <strong>Not public until Publish</strong>
+          <small>Publish generates URL, share link, and QR code.</small>
+        </div>
+
+        <div class="event-builder-grid">
+          <div class="event-builder-main">
+            <label>
+              <span>Event name</span>
+              <input id="eventNameInput" type="text" value="Rain Run Romantic" />
+            </label>
+            <div class="dialog-grid">
+              <label>
+                <span>Date</span>
+                <input id="eventDateInput" type="text" value="Thu 28" />
+              </label>
+              <label>
+                <span>Time</span>
+                <input id="eventTimeInput" type="text" value="20:30" />
+              </label>
+            </div>
+            <div class="dialog-grid">
+              <label>
+                <span>Distance</span>
+                <input id="eventDistanceInput" type="text" value="7K" />
+              </label>
+              <label>
+                <span>Pace</span>
+                <select id="eventPaceInput">
+                  <option>Social pace</option>
+                  <option>Easy-steady</option>
+                  <option>No one gets dropped</option>
+                  <option>Race arc</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              <span>Meetup spot</span>
+              <input id="eventLocationInput" type="text" value="Sukhbaatar Square / north side" />
+            </label>
+            <div class="strava-route-field">
+              <label>
+                <span>Route from Strava</span>
+                <select id="eventStravaRouteInput">
+                  <option value="night-loop-07">Past Strava run / Night Loop 07</option>
+                  <option value="first-timer-friday">Past Strava run / First-Timer Friday 5K</option>
+                  <option value="coffee-recovery-5k">Past Strava route / Coffee Recovery 5K</option>
+                  <option value="sunday-long-run">Past Strava route / Sunday Long Run 14K</option>
+                </select>
+              </label>
+              <div class="route-map builder-route-map" aria-hidden="true">
+                <svg viewBox="0 0 500 260">
+                  <path id="builderRoutePath" d="" />
+                  <circle id="builderRouteStart" cx="72" cy="178" r="5" />
+                </svg>
+                <span id="builderRouteLabel">Strava route preview</span>
+              </div>
+            </div>
+            <div class="dialog-grid">
+              <label>
+                <span>After run</span>
+                <select id="eventAfterInput">
+                  <option>Coffee after</option>
+                  <option>Breakfast after</option>
+                  <option>No after plan</option>
+                  <option>Club dinner</option>
+                </select>
+              </label>
+              <label>
+                <span>Capacity</span>
+                <input id="eventCapacityInput" type="text" value="60 runners" />
+              </label>
+            </div>
+            <label>
+              <span>Vibe label</span>
+              <select id="eventVibeInput">
+                <option>Chaos Weather Approved</option>
+                <option>No One Gets Dropped</option>
+                <option>Coffee Destination Run</option>
+                <option>Race Arc Session</option>
+              </select>
+            </label>
+            <label>
+              <span>Host note</span>
+              <textarea id="eventNoteInput" rows="3">Bring black layers. Easy regroup points. First-timers welcome.</textarea>
+            </label>
+          </div>
+
+          <aside class="event-builder-side">
+            <label class="upload-field">
+              <span>Invite cover</span>
+              <input id="eventImageInput" type="file" accept="image/*" />
+              <div class="upload-preview" id="eventImagePreview">
+                <strong>Upload event image</strong>
+                <small>Used for invite and story preview</small>
+              </div>
+            </label>
+            <div class="invite-settings">
+              <span>RSVP settings</span>
+              <label><input type="checkbox" checked /> Collect runner name</label>
+              <label><input type="checkbox" checked /> Allow plus-one</label>
+              <label><input type="checkbox" /> Private invite link</label>
+            </div>
+            <div class="event-invite-preview" id="eventInvitePreview">
+              <span>Invite preview</span>
+              <strong>Rain Run Romantic</strong>
+              <small>Thu 28 / 20:30 / 7K</small>
+            </div>
+          </aside>
+        </div>
+
+        <div class="dialog-actions">
+          <button class="secondary-button" type="button" id="copyInviteLinkButton">Copy invite link</button>
+          <button class="primary-button" type="submit" id="saveEventButton">Publish invite</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="photo-lightbox" id="photoLightbox" aria-labelledby="photoLightboxTitle">
+      <div class="photo-lightbox-frame">
+        <div class="dialog-head">
+          <div>
+            <p class="overline" id="photoLightboxMeta">Race photo</p>
+            <h3 id="photoLightboxTitle">Bib photo</h3>
+          </div>
+          <button class="icon-button" type="button" id="closePhotoLightboxButton" aria-label="Close photo preview">×</button>
+        </div>
+        <img id="photoLightboxImage" alt="Selected race photo full size" />
+        <div class="dialog-actions">
+          <button class="primary-button" type="button" id="photoLightboxDownloadButton">Download HQ original</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase-config.js?v=1"></script>
+    <script src="./supabase-bridge.js?v=1"></script>
+    <script src="./script.js?v=50"></script>
+  </body>
+</html>
